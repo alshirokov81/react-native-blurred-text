@@ -19,9 +19,7 @@ const BlurredText =  () => {
   return (
     <RNBlurredText
         value={'This text will be displayed blurry'}
-        fontSize={20}
         blurr={4}
-        color={"rgb(20,200,220)"}
         style={styles.textStyle}
     />
   )
@@ -31,6 +29,9 @@ const styles = StyleSheet.create({
   textStyle: {
     width: '100%',
     height: 100,
+    fontSize: 25,
+    fontFamily: 'Cochin',
+    color: 'blue'
   },
 });
 
