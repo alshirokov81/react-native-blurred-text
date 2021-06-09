@@ -25,23 +25,28 @@ public class BlurredTextViewManager extends SimpleViewManager<View> {
         return new BlurredTextView(reactContext);
     }
 
-    @ReactProp(name="textVal")
-    public void setText(BlurredTextView blurredTextView, String textVal){
-      blurredTextView.setTextValue(textVal);
+    @ReactProp(name="value")
+    public void setText(BlurredTextView blurredTextView, String value){
+      blurredTextView.setTextValue(value);
     }
 
-    @ReactProp(name="textColor", customType = "Color")
+    @ReactProp(name="color", customType = "Color")
     public void setTextColor(BlurredTextView blurredTextView, int color){
       blurredTextView.setTextColor(color);
     }
 
-    @ReactProp(name="textSize")
-    public void setTextSize(BlurredTextView blurredTextView, int textSize){
-      blurredTextView.setTextSize(textSize);
+    @ReactProp(name="fontSize")
+    public void setTextSize(BlurredTextView blurredTextView, int fontSize){
+      blurredTextView.setTextSize(fontSize);
     }
 
-    @ReactProp(name="blurrVal")
-    public void setBlurr(BlurredTextView blurredTextView, float blurrVal){
-      blurredTextView.setBlurrRadius(blurrVal);
+    @ReactProp(name="fontFamily")
+    public void setTextSize(BlurredTextView blurredTextView, String fontFamily){
+      blurredTextView.setFontFamily(fontFamily);
+    }
+
+    @ReactProp(name="blurr")
+    public void setBlurr(BlurredTextView blurredTextView, float blurr){
+      blurredTextView.setBlurrRadius(blurr);
     }
 }

@@ -2,6 +2,7 @@ package com.reactnativeblurredtext;
 
 import android.content.Context;
 import android.graphics.BlurMaskFilter;
+import android.graphics.Typeface;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.MaskFilterSpan;
@@ -30,6 +31,11 @@ public class BlurredTextView extends androidx.appcompat.widget.AppCompatTextView
 
     public void setTextSize(Integer textSize){
         setTextSize(textSize);
+    }
+
+    public void setFontFamily(String fontFamily){
+        Typeface typeface = Typeface.create(fontFamily, 0);
+        setTypeface(typeface);
     }
 
     public void setBlurredText(){

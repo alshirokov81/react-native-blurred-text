@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RNBlurredText /> Should display text 1`] = `
+<BlurredTextView
+  blurrVal={4}
+  textColor="rgb(20,200,220)"
+  textSize={20}
+  textVal="Blurred text"
+/>
+`;
+
+exports[`<RNBlurredText /> Should display text for android 1`] = `
+<BlurredTextView
+  blurrVal={4}
+  textColor="rgb(20,200,220)"
+  textSize={20}
+  textVal="Blurred text"
+/>
+`;
+
+exports[`<RNBlurredText /> Should display text for ios 1`] = `
+<BlurredTextView
+  blurrVal={2.6}
+  textColor="rgb(20,200,220)"
+  textSize={20}
+  textVal="Blurred text"
+/>
+`;

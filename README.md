@@ -11,11 +11,30 @@ npm install react-native-blurred-text
 ## Usage
 
 ```js
+import {StyleSheet} from 'react-native';
 import BlurredText from "react-native-blurred-text";
 
-// ...
+const BlurredText =  () => {
 
-const result = await BlurredText.multiply(3, 7);
+  return (
+    <RNBlurredText
+        value={'This text will be displayed blurry'}
+        fontSize={20}
+        blurr={4}
+        color={"rgb(20,200,220)"}
+        style={styles.textStyle}
+    />
+  )
+}
+
+const styles = StyleSheet.create({
+  textStyle: {
+    width: '100%',
+    height: 100,
+  },
+});
+
+export default BlurredText;
 ```
 
 ## Contributing

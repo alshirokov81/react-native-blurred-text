@@ -16,26 +16,30 @@ RCT_EXPORT_MODULE(BlurredTextView)
     return label;
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(textVal, NSString, UILabel)
+RCT_CUSTOM_VIEW_PROPERTY(value, NSString, UILabel)
 {
   view.text = json;
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(blurrVal, NSString, BlurredUILabel)
+RCT_CUSTOM_VIEW_PROPERTY(blurr, NSString, BlurredUILabel)
 {
-  //view.text = json;
-  //view.blur(radius: 9)
   view.blurRadius = [json floatValue];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(textSize, NSString, UILabel)
+RCT_CUSTOM_VIEW_PROPERTY(fontSize, NSString, UILabel)
 {
     view.font = [UIFont systemFontOfSize:[json floatValue]];
+    [UIFont fontWithName:view.font.fontName size:[json floatValue]];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(textColor, UIColor, UILabel)
+RCT_CUSTOM_VIEW_PROPERTY(color, UIColor, UILabel)
 {
     view.textColor = json ? [RCTConvert UIColor:json] : defaultView.textColor;
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(fontFamily, NSString, UILabel)
+{
+    view.font = [UIFont fontWithName:json size:view.font.pointSize];
 }
 
 @end
