@@ -20,9 +20,9 @@ describe('<RNBlurredText />', () => {
 
     const testRenderer = renderer.create(
       <RNBlurredText
-      style={styles.textStyle}
-      value={testText}
-      blurr={blurrVal}
+        style={styles.textStyle}
+        value={testText}
+        blurr={blurrVal}
       />
     );
     expect (testRenderer.toJSON()).toMatchSnapshot();
@@ -33,9 +33,9 @@ describe('<RNBlurredText />', () => {
 
     const testRenderer = renderer.create(
       <RNBlurredText
-      style={styles.textStyle}
-      value={testText}
-      blurr={blurrVal}
+        style={styles.textStyle}
+        value={testText}
+        blurr={blurrVal}
       />
     );
     expect (testRenderer.toJSON()).toMatchSnapshot();
