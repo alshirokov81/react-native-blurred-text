@@ -1,7 +1,15 @@
 #import "BlurredUILabel.h"
 
 @implementation BlurredUILabel
-- (void)blurryText {
+- (void)blurryText{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setBlurryText];
+    });
+
+}
+
+
+- (void)setBlurryText {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [[UIScreen mainScreen] scale]);
     
     [self.layer renderInContext: UIGraphicsGetCurrentContext()];
