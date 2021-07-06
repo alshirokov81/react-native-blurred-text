@@ -14,7 +14,7 @@ export const BlurredTextViewManager = requireNativeComponent<BlurredTextProps>(
 const BlurredText = ({blurr = 0,...props}: BlurredTextProps) => {
   const blurrValAdjustedToOS = Platform.select({
     android: blurr,
-    ios: blurr*0.65,
+    ios: blurr*0.25,
   });
   return (
     <BlurredTextViewManager
