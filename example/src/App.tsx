@@ -22,7 +22,7 @@ const App: () => Node = () => {
       <Text style={styles.titleTextHeader}>Testing blurred text in {Platform.OS}</Text>
         <RNBlurredText
           value={blurredTextVal}
-          blurr={25}
+          blurr={10}
           style={styles.blurredText}
         />
 
@@ -41,9 +41,10 @@ const styles = StyleSheet.create({
   blurredText: {
     width: '100%',
     height: 100,
-    fontSize: 25,
+    fontSize: 55,
     fontFamily: 'Cochin',
-    color: 'blue'
+    color: 'blue',
+    backgroundColor: 'pink',
   },
   inputStyle: {
     marginHorizontal: 20,

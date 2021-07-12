@@ -1,9 +1,9 @@
 import React from 'react';
-import { requireNativeComponent, TextStyle, Platform } from 'react-native';
+import { requireNativeComponent, ViewStyle, Platform } from 'react-native';
 
 type BlurredTextProps = {
   value: string | undefined,
-  style?: TextStyle | undefined;
+  style?: ViewStyle | undefined;
   blurr: number | undefined;
 };
 
@@ -13,8 +13,8 @@ export const BlurredTextViewManager = requireNativeComponent<BlurredTextProps>(
 
 const BlurredText = ({blurr = 0,...props}: BlurredTextProps) => {
   const blurrValAdjustedToOS = Platform.select({
-    android: blurr,
-    ios: blurr*0.25,
+    android: blurr*4,
+    ios: blurr,
   });
   return (
     <BlurredTextViewManager

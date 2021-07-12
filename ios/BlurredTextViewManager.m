@@ -9,39 +9,38 @@
 
 RCT_EXPORT_MODULE(BlurredTextView)
 
-- (UILabel *)view
+- (UIView *)view
 {
-    return [[BlurredUILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    return [[BlurredUIView alloc] init];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(value, NSString, BlurredUILabel)
+RCT_CUSTOM_VIEW_PROPERTY(value, NSString, BlurredUIView)
 {
-  //view.text = json;
   view.textForBlur = json;
   [view blurryText];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(blurr, NSString, BlurredUILabel)
+RCT_CUSTOM_VIEW_PROPERTY(blurr, NSString, BlurredUIView)
 {
   view.blurRadius = [json floatValue];
   [view blurryText];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(fontSize, NSString, BlurredUILabel)
+RCT_CUSTOM_VIEW_PROPERTY(fontSize, NSString, BlurredUIView)
 {
-    view.font = [UIFont systemFontOfSize:[json floatValue]];
+    view.fontSize = [json floatValue];
     [view blurryText];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(color, UIColor, BlurredUILabel)
+RCT_CUSTOM_VIEW_PROPERTY(color, UIColor, BlurredUIView)
 {
     view.textColor = json ? [RCTConvert UIColor:json] : defaultView.textColor;
     [view blurryText];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(fontFamily, NSString, BlurredUILabel)
+RCT_CUSTOM_VIEW_PROPERTY(fontFamily, NSString, BlurredUIView)
 {
-    view.font = [UIFont fontWithName:json size:view.font.pointSize];
+    view.fontFamily = json;
     [view blurryText];
 }
 
