@@ -1,9 +1,9 @@
 import React from 'react';
-import { requireNativeComponent, ViewStyle, Platform } from 'react-native';
+import { requireNativeComponent, ViewStyle, TextStyle, Platform } from 'react-native';
 
 type BlurredTextProps = {
   value: string | undefined,
-  style?: ViewStyle | undefined;
+  style?: ViewStyle| TextStyle | undefined;
   blurr: number | undefined;
 };
 
